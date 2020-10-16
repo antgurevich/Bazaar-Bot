@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import messagebox, font, HORIZONTAL, RIGHT, Y, END, MULTIPLE, font
 from configparser import ConfigParser
 ###########################################################################
-version="v.0.1.0"
+version="v.0.1.0-alpha"
 apiKey="[REDACTED]" #Run /api new in Hypixel to receive your own API key
 config_object=ConfigParser()
 ###########################################################################
@@ -23,7 +23,7 @@ def changeLog(): #Shows the Change Log
     vText.config(font=vTextFont)
     vText.pack()
     
-    logList.append("0.1.0 (10/16/2020): Initial functional version released")
+    logList.append("0.1.0-alpha (10/16/2020): Initial functional version released")
     
     for item in logList:
         changeLogListBox.insert(END,item)
@@ -203,7 +203,7 @@ def mainMenu(): #Loads main menu
 
     tk.Label(menu,text="Bazaarinator 3000",font=("Pristina",50)).place(x=70,y=30)
     tk.Label(menu,text="Created by Anton Gurevich",font=("",10)).place(x=200,y=100)
-    tk.Label(menu,text=version).place(x=560,y=380)
+    tk.Label(menu,text=version).place(x=530,y=380)
     
     tk.Button(menu,text="Run Check",command=checkPrices,fg="green",font=("",25)).place(x=60,y=250)
     tk.Button(menu,text="Settings",command=settings,font=("",25)).place(x=260,y=250)
